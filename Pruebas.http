@@ -1,0 +1,14 @@
+### 1.- login - Obtener el token JWT
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "H_gdaniel123456@hotmail.com",
+    "password":"1234567"
+}
+
+
+### 2.- perfil - Obtener la contraseña y el correo por medio del token
+GET http://localhost:3000/perfil
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkhfZ2RhbmllbDEyMzQ1NkBob3RtYWlsLmNvbSIsInBhc3N3b3JkIjoiMTIzNDU2NyIsImlhdCI6MTc0MTMwNjAwNCwiZXhwIjoxNzQxMzA5NjA0fQ.bOjoKAdyHeZTuZXeOlFfLu9lDB-jWvL01keBruN7SOo
