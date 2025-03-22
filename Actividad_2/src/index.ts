@@ -33,17 +33,23 @@ const swaggerDocs = swaggerJsDoc(swaggerConfig);
 app.use('/swagger', serve , setup(swaggerDocs));
 
 
-// Connect to mongoose
-const db_uri = process.env.MONGO_URL ?? '';
-
-connect(db_uri).then( res =>{
-    app.listen(port, () => {
-        console.log(`app is running in port ${port}`)
-    })
-    
-}).catch(e=>{
-    console.log('failed to connect to Mongo: ', e)
+app.listen(port, () => {
+    console.log(`app is running in port ${port}`)
 })
+
+
+
+// Connect to mongoose
+//const db_uri = process.env.MONGO_URL ?? '';
+//
+//connect(db_uri).then( res =>{
+//    app.listen(port, () => {
+//        console.log(`app is running in port ${port}`)
+//    })
+//    
+//}).catch(e=>{
+//    console.log('failed to connect to Mongo: ', e)
+//})
 
 
 

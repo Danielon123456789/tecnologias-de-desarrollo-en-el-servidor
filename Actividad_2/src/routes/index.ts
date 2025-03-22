@@ -4,6 +4,8 @@ import { getAll } from '../controllers/user'
 import { getAll as getAllProducts } from '../controllers/products'
 import { role } from '../middlewares/role'
 import { Roles } from '../types/roles';
+import { downloadFile, uploadFile } from '../controllers/files'
+import { upload } from '../middlewares/upload'
 
 
 
@@ -32,7 +34,13 @@ const router = Router();
  */
 router.get('/products', getAllProducts)
 
+router.get('/download',downloadFile)
+
+router.post('/upload', upload.single('image') ,uploadFile)
+
 router.get('/')
+
+router.get('/imagen')
 
 router.get('/test', (req, res) => {
     res.send('test endpoint works')
