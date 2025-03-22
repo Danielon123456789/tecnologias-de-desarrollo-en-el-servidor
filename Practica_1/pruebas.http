@@ -1,0 +1,77 @@
+
+### registro
+
+POST http://localhost:3000/registro
+Content-Type: application/json
+
+{
+    "nombre": "Daniel Hernández",
+    "email": "H_gdaniel123456@hotmail.com",
+    "contrasena": "1234567"
+}
+
+### login
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "H_gdanielpatron@hotmail.com",
+    "contrasena": "1234567"
+}
+
+
+### perfil
+
+GET http://localhost:3000/perfil
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGUyMWZhNGU4YTRiY2U4NzQ3MzI4YSIsImVtYWlsIjoiSF9nZGFuaWVscGF0cm9uQGhvdG1haWwuY29tIiwicm9sIjoiYWRtaW4iLCJpYXQiOjE3NDI2MjU1MDYsImV4cCI6MTc0MjYyOTEwNn0.G7tl3wq39Hdlf5ip6n8gUEXqdiUlgsNVlcKDozAFwQw
+
+### lista de todos los usuarios
+GET http://localhost:3000/usuarios
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGUyMWZhNGU4YTRiY2U4NzQ3MzI4YSIsImVtYWlsIjoiSF9nZGFuaWVscGF0cm9uQGhvdG1haWwuY29tIiwicm9sIjoiYWRtaW4iLCJpYXQiOjE3NDI2MTI3ODUsImV4cCI6MTc0MjYxNjM4NX0.IRc0O7zyXt4IWve34QvHt3OW9tWDDLJeZ_OixBFG6jI
+
+### obtener un usuario por ID
+
+GET http://localhost:3000/usuarios/67de21fa4e8a4bce8747328a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGUyMWZhNGU4YTRiY2U4NzQ3MzI4YSIsImVtYWlsIjoiSF9nZGFuaWVscGF0cm9uQGhvdG1haWwuY29tIiwicm9sIjoiYWRtaW4iLCJpYXQiOjE3NDI2MTI3ODUsImV4cCI6MTc0MjYxNjM4NX0.IRc0O7zyXt4IWve34QvHt3OW9tWDDLJeZ_OixBFG6jI
+
+### crear un nuevo usuario
+POST http://localhost:3000/usuarios
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGUyMWZhNGU4YTRiY2U4NzQ3MzI4YSIsImVtYWlsIjoiSF9nZGFuaWVscGF0cm9uQGhvdG1haWwuY29tIiwicm9sIjoiYWRtaW4iLCJpYXQiOjE3NDI2MTI3ODUsImV4cCI6MTc0MjYxNjM4NX0.IRc0O7zyXt4IWve34QvHt3OW9tWDDLJeZ_OixBFG6jI
+Content-Type: application/json
+
+{
+    "nombre": "Nuevo Usuario",
+    "email": "nuevo@correo.com",
+    "contrasena": "123",
+    "rol": "usuario"
+}
+
+### Actualizar un usuario por ID
+PUT http://localhost:3000/usuarios/67de21fa4e8a4bce8747328a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGUyMWZhNGU4YTRiY2U4NzQ3MzI4YSIsImVtYWlsIjoiSF9nZGFuaWVscGF0cm9uQGhvdG1haWwuY29tIiwicm9sIjoiYWRtaW4iLCJpYXQiOjE3NDI2MTI3ODUsImV4cCI6MTc0MjYxNjM4NX0.IRc0O7zyXt4IWve34QvHt3OW9tWDDLJeZ_OixBFG6jI
+Content-Type: application/json
+
+{
+    "nombre": "Daniel Hernández actualizado",
+    "rol": "admin"
+}
+
+### Eliminar un usuario por ID
+DELETE http://localhost:3000/usuarios/67de2aae29cb36202187a151
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGUyMWZhNGU4YTRiY2U4NzQ3MzI4YSIsImVtYWlsIjoiSF9nZGFuaWVscGF0cm9uQGhvdG1haWwuY29tIiwicm9sIjoiYWRtaW4iLCJpYXQiOjE3NDI2MTI3ODUsImV4cCI6MTc0MjYxNjM4NX0.IRc0O7zyXt4IWve34QvHt3OW9tWDDLJeZ_OixBFG6jI
+
+### crear una publicacion
+
+POST http://localhost:3000/publicaciones
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGUyMWZhNGU4YTRiY2U4NzQ3MzI4YSIsImVtYWlsIjoiSF9nZGFuaWVscGF0cm9uQGhvdG1haWwuY29tIiwicm9sIjoiYWRtaW4iLCJpYXQiOjE3NDI2MTI3ODUsImV4cCI6MTc0MjYxNjM4NX0.IRc0O7zyXt4IWve34QvHt3OW9tWDDLJeZ_OixBFG6jI
+Content-Type: application/json
+
+{
+    "titulo": "Mi primera publicación",
+    "contenido": "Este es el contenido del post."
+}
+
+### obtener todas las publicaciones
+GET http://localhost:3000/publicaciones
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGUyMWZhNGU4YTRiY2U4NzQ3MzI4YSIsImVtYWlsIjoiSF9nZGFuaWVscGF0cm9uQGhvdG1haWwuY29tIiwicm9sIjoiYWRtaW4iLCJpYXQiOjE3NDI2MjIyOTcsImV4cCI6MTc0MjYyNTg5N30.5-dEPW05Llc4OLjqhdqmeXaAu3YNTYs5cYJWBuZ1TV0
