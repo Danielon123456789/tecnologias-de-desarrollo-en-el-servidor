@@ -1,0 +1,12 @@
+<div class="nav-links">
+    <a href="/">Ver Galería</a>
+</div>
+
+{{#if error}}
+    <div style="color: red;">Error: {{error}}</div>
+{{/if}}
+
+<form action="/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/png, image/jpeg" required>
+    <button type="submit">Subir Imagen</button>
+</form>

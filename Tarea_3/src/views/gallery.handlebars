@@ -1,0 +1,18 @@
+<div class="nav-links">
+    <a href="/upload">Subir Nueva Imagen</a>
+</div>
+
+{{#if isEmpty}}
+    <div>
+        <p>No hay imágenes disponibles</p>
+        <a href="/upload">Subir la primera imagen</a>
+    </div>
+{{else}}
+    <div class="gallery">
+        {{#each images}}
+            <div class="image-container">
+                <img src="/uploads/{{this}}" alt="{{this}}">
+            </div>
+        {{/each}}
+    </div>
+{{/if}}
